@@ -1,13 +1,12 @@
 ---
 # tasks file for mfic.vim
 - name: Install required packages
-  package:
+  apt:
     name:
-      - vim-enhanced
       - git
-      - powerline-fonts
+      - fonts-powerline
       - fzf
-    state: installed
+    state: present
   become: yes
   tags:
     - install_packages
